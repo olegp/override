@@ -22,7 +22,7 @@ npm -g install override
 ## Usage
 
 To run your app via `override` replace the call to `node` with `node-override` passing
-in your Override environment as the first parameter. So instead of `node index.js`, use 
+in your Override environment before the filename of your main module. So instead of `node index.js`, use 
 `node-override -e mylog,simple index.js`. 
 
 ## Environments
