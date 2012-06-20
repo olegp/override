@@ -48,7 +48,7 @@ export OVERRIDE_ENV=mylog,simple
 Override environments are simply comma separated lists of Overrides packages
  or module names. You may for example have a different environment for development, staging and production.
 
-## Override Functions
+## Override Modules
 
 Override modules have the following signature:
 
