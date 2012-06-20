@@ -3,13 +3,13 @@
 Override is a general purpose middleware framework for Node.js that lets you 
 override and extend built in functionality.
 
-Override functions are executed in sequence before your main module is loaded, making 
+Override modules are executed in sequence before your main module is loaded, making 
 it possible to run additional code on startup & modify built in prototypes and 
 functions.
 
-For example, override functions make it possible to replace the built in `console.log` 
-with a version that sends the logs to a third party service, chroot the current process 
-before your module is loaded, enable profiling etc. etc.
+For example, override modules make it possible to replace the built in `console.log` 
+with a version that sends the logs to a third party service, chroot the current process,
+enable profiling etc. etc.
 
 ## Installation
 
@@ -22,31 +22,20 @@ npm -g install override
 ## Usage
 
 To run your app via `override` replace the call to `node` with `node-override` passing
-in your Override environment, which is just a comma separated list of override packages
- or module names, as the first parameter. So instead of:
+in your Override environment as the first parameter. So instead of `node index.js`, use 
+`node-override -e mylog,simple index.js`. 
 
-```bash
-node index.js
-``` 
+## Environments
 
-use:
+Override environments are simply comma separated lists of Override package or module names. You may for example have a different environment for development, staging and production.
 
-```bash
-node-override -e mylog,simple index.js
-``` 
+You can avoid specifying the environment every time you run your app by setting the `OVERRIDE_ENV` environment variable.
 
-Note that you can avoid specifying the environment every time by setting the `OVERRIDE_ENV` environment variable.
-
-For example on Unix you can do this with:
+For example on *nix you can do this with:
 
 ```bash
 export OVERRIDE_ENV=mylog,simple
 ``` 
-
-## Environments
-
-Override environments are simply comma separated lists of Overrides packages
- or module names. You may for example have a different environment for development, staging and production.
 
 ## Override Modules
 
@@ -62,7 +51,7 @@ module.exports = function(next) {
 Here, the code outside of the exported function runs in a clean environment, before any overrides have had effect.
 
 The exported function accepts a single parameter, which is the next function to call in the override middleware chain. 
-The middleware chain terminate with the loading of the app's main module. As such any calls after `next()` will take 
+The middleware chain terminates with the loading of the app's main module. As such any calls after `next()` will take 
 place after the main module has been loaded.
 
 Use [environment variables](http://nodejs.org/api/process.html#process_process_env) to pass configuration parameters to your module.
