@@ -27,7 +27,7 @@ in your Override environment before the filename of your main module. So instead
 
 ## Environments
 
-Override environments are simply comma separated lists of Override package or module names. You may for example have a different environment for development, staging and production.
+Override environments are simply comma separated lists of Override package or module names. You may for example have different environments for development, staging and production.
 
 You can avoid specifying the environment every time you run your app by setting the `OVERRIDE_ENV` environment variable.
 
@@ -56,7 +56,7 @@ place after the main module has been loaded.
 
 Use [environment variables](http://nodejs.org/api/process.html#process_process_env) to pass configuration parameters to your module.
 
-You can find more Override module examples in the 'examples` sub-directory.
+You can find more Override module examples in the [examples](https://github.com/olegp/override/tree/master/examples) sub-directory.
 
 Override modules can be distributed as packages via NPM. The convention is to prefix the name with `or-`. This 
 makes it easy to [search for them on GitHub](https://github.com/search?q=or-*&repo=&langOverride=&start_value=1&type=Repositories&language=JavaScript).
