@@ -13,10 +13,10 @@ enable profiling etc. etc.
 
 ## Installation
 
-Install `override` as a global package (use `sudo` if you're on Ubuntu or Mac):
+Install `override` as a global package:
 
 ```bash
-npm -g install override
+[sudo] npm -g install override
 ```
 
 ## Usage
