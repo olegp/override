@@ -1,7 +1,7 @@
 {
   "name": "override",
   "keywords": [],
-  "description": "General purpose middleware framework for Node.js that lets you override and extend built in functionality",
+  "description": "General purpose middleware framework for Node letting you override & extend built in functionality",
   "version": "0.0.1",
   "author": "Oleg Podsechin <oleg@ionsquare.com>",
   "directories" : {
