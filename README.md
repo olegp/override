@@ -59,8 +59,8 @@ You can specify the names and types of configuration parameters required by your
 For an example, check out [or-timeout/package.json](https://github.com/olegp/or-mylog/blob/master/package.json).
 
 Override modules are distributed as packages via NPM. The convention is to prefix the name with `or-`. This 
-makes it easy to [search for them on GitHub](https://github.com/search?q=or-*&repo=&langOverride=&start_value=1&type=Repositories&language=JavaScript) and [http://npmjs.org](http://npmjs.org).
-They also make for great examples you can use as the basis for your own Override module.
+makes it easy to search for them on [http://search.npmjs.org](http://search.npmjs.org).
+These existing open source modules make for great examples you can use as the basis for your own Override module.
 
 ## License 
 
